@@ -6,6 +6,7 @@
     <title>MYKD</title>
     <link rel="shortcut icon" href="./src/images/favicon/favicon.png" type="image/png">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -20,25 +21,48 @@
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
-        <ul>
-            <li><img src="./src/images/header-footer/search.svg" alt="Search"></li>
-            <li><img src="./src/images/button/button.svg" alt="Button"></li>
+        <ul id="headerButtonLinks">
+            <li><a href="#"><img src="./src/images/header-footer/search.svg" alt="Search"></a></li>
+            <li>
+                <a href="#">
+                    <div id="headerButtonLinkItems">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span>Sign In</span>
+                    </div>
+                    <svg class="buttonSvg" preserveAspectRatio="none" viewBox="0 0 157 48" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z" fill="#45f882"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 1L1 24.5111L25 47L8 23.4889L25 1Z" fill="#45f882"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.75 1L0.75 25L23.75 47H131.75L155.75 25L131.75 1H24.75Z" stroke="#45f882" stroke-width="1.5"></path>
+                    </svg>
+                </a>
+            </li>
         </ul>
     </header>
     <main>
         <section id="UpBanner">
             <img id="upBannerBackground" src="./src/images/upbanner/slider_bg.jpg" alt="">
-            <div>
-                <div>
-                    <h6>live gaming</h6>
-                    <h2>steaming</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".8s">video games online</p>
-                    <a href="https://themedox.com/mykd/contact-us/" target="_self" rel="nofollow" class="tg-btn-1 genix-btn">
-                        <span>contact us</span>
-                        <img id="" src="./src/images/button/button.svg" alt="">
+            <div id="upBanner-Left">
+                <div id="upBanner-LeftTop">
+                    <img src="./src/images/upbanner/text_gradient_bg.png" alt="Text Gradient Background">
+                    <h3>LIVE GAMING</h3>
+                    <h1>STEAMING</h1>
+                    <p>VIDEO GAMES ONLINE</p>
+                    <a href="https://themedox.com/mykd/contact-us/">
+                        <span>CONTACT US</span>
+                        <svg class="buttonSvg" preserveAspectRatio="none" viewBox="0 0 157 48" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M25 1L1 24.5111L25 47L8 23.4889L25 1Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.75 1L0.75 25L23.75 47H131.75L155.75 25L131.75 1H24.75Z" stroke="currentColor" stroke-width="1.5"></path>
+                        </svg>
                     </a>
                 </div>
+                <div id="upBanner-LeftBottom">
+                    <img src="./src/images/upbanner/brand_logo01.png" alt="Brand Logo 1">
+                    <img src="./src/images/upbanner/brand_logo02.png" alt="Brand Logo 2">
+                    <img src="./src/images/upbanner/brand_logo03.png" alt="Brand Logo 3">
+                </div>
             </div>
+            <img id="upBanner-RightImage" src="./src/images/upbanner/slider_img01.png" alt="">
         </section>
     </main>
     <footer>

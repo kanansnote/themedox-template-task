@@ -1,6 +1,8 @@
 main {
     
     #UpBanner {
+        display: flex;
+        justify-content: space-around;
 
         #upBannerBackground {
             width: 100%;
@@ -8,6 +10,63 @@ main {
             position: absolute;
             top: 0;
             z-index: -1;
+        }
+
+        #upBanner-Left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            #upBanner-LeftTop {
+                padding: 17px 0 17px 20px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+                
+                img {
+                    opacity: 0.5;
+                    position: absolute;
+                    top: 1.5vh;
+                    left: 0;
+                    z-index: -1;
+                }
+
+                h3 {
+                    z-index: 1;
+                    color: var(--light-green-color);
+                    font-family: var(--poppins-font);
+                    letter-spacing: 4px;
+                }
+
+                h1 {
+                    font-size: 100px;
+                    font-family: var(--berlin-sans-font);
+                    text-shadow: -1px 5px 0px rgba(69, 248, 130, 0.66);
+                    color: white;
+                }
+
+                p {
+                    color: white;
+                    letter-spacing: 5px;
+                    font-family: var(--poppins-font);
+                    font-size: 26px;
+                    font-weight: 700;
+                }
+
+                .buttonSvg {
+                    
+                }
+            }
+
+            #upBanner-LeftBottom {
+                display: flex;
+            }
+        }
+
+        #upBanner-RightImage {
+            object-fit: contain;
+            width: 70vh;
         }
     }
 }

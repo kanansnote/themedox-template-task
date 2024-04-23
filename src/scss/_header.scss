@@ -2,6 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5vh;
 
     .logo {
         object-fit: contain;
@@ -10,7 +11,12 @@ header {
 
     a {
         text-transform: uppercase;
-        font-weight: 900;
+        font-weight: 600;
+
+        &:hover {
+            color: var(--light-green-color);
+            transition: all 0.3s ease-out;
+        }
     }
 
     nav {
@@ -22,6 +28,47 @@ header {
 
                 a {
                     color: white;
+                    font-family: var(--barlow-font);
+                }
+            }
+        }
+    }
+
+    #headerButtonLinks {
+        display: flex;
+        align-items: center;
+        gap: 5vh;
+
+        li {
+
+            &:nth-child(1) {
+                position: relative;
+
+                &:nth-child(1)::after {
+                    content: "";
+                    position: absolute;
+                    right: -3vh;
+                    width: 5px;
+                    height: 4vh;
+                    background-color: #131b22;
+                    box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.61);
+                }
+            }
+
+            a {
+                color: white;
+                position: relative;
+                display: flex;
+                align-items: center;
+            
+                span {
+                }
+            
+                .buttonSvg {
+                    width: 10vw;
+                    height: 3vw;
+                    object-fit: contain;
+                    font-family: var(--barlow-font);
                 }
             }
         }
