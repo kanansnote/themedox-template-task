@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        object-fit: contain;
+        width: 35vh;
+    }
+
+    a {
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 5vh;
+
+            li {
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
