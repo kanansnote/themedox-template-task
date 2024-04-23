@@ -48,6 +48,7 @@ header {
                     content: "";
                     position: absolute;
                     right: -3vh;
+                    top: 0;
                     width: 5px;
                     height: 4vh;
                     background-color: #131b22;
@@ -60,15 +61,22 @@ header {
                 position: relative;
                 display: flex;
                 align-items: center;
-            
-                span {
-                }
+                position: relative;
             
                 .buttonSvg {
                     width: 10vw;
                     height: 3vw;
                     object-fit: contain;
                     font-family: var(--barlow-font);
+                }
+
+                #headerButtonLinkItems {
+                    position: absolute;
+                    left: 4.5vh;
+
+                    span {
+                        font-family: var(--barlow-font);
+                    }
                 }
             }
         }

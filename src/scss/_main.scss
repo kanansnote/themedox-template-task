@@ -6,7 +6,7 @@ main {
 
         #upBannerBackground {
             width: 100%;
-            height: 100vh;
+            height: 140vh;
             position: absolute;
             top: 0;
             z-index: -1;
@@ -27,7 +27,7 @@ main {
                 img {
                     opacity: 0.5;
                     position: absolute;
-                    top: 1.5vh;
+                    top: 1vh;
                     left: 0;
                     z-index: -1;
                 }
@@ -54,19 +54,63 @@ main {
                     font-weight: 700;
                 }
 
-                .buttonSvg {
-                    
+                a {
+                    color: white;
+                    font-family: var(--barlow-font);
+                    position: relative;
+                    font-weight: bold;
+
+                    span {
+                        position: absolute;
+                        top: 3vh;
+                        left: 7vh;
+                        color: #201f2a;
+                        letter-spacing: 0.8px;
+                    }
+
+                    .buttonSvg {
+                        width: 30vh;
+                        fill: var(--light-green-color);
+                        transition: all 0.3s ease-in-out;
+                        
+                        &:hover {
+                            fill: white;
+                        }
+                    }
                 }
+
             }
 
             #upBanner-LeftBottom {
                 display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 40vw;
+
+                img {
+                    object-fit: contain;
+                }
             }
         }
 
         #upBanner-RightImage {
             object-fit: contain;
             width: 70vh;
+        }
+    }
+
+    #UpBannerSectionWrapper {
+        display: flex;
+
+        #upBannerSectionWrapper-Left {
+            background-color: var(--light-green-color);
+            clip-path: inset(0 0 9% 0); /* 9% from the bottom */
+        }
+
+        #upBannerSectionWrapper-Right {
+            background-color: var(--light-green-color);
+            clip-path: inset(0 0 9% 0); /* 9% from the bottom */
+
         }
     }
 }
