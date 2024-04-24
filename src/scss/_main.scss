@@ -86,6 +86,7 @@ main {
                 justify-content: space-around;
                 align-items: center;
                 width: 40vw;
+                cursor: pointer;
 
                 img {
                     object-fit: contain;
@@ -101,16 +102,76 @@ main {
 
     #UpBannerSectionWrapper {
         display: flex;
+        justify-content: space-between;
 
         #upBannerSectionWrapper-Left {
-            background-color: var(--light-green-color);
-            clip-path: inset(0 0 9% 0); /* 9% from the bottom */
+            width: 0;
+            height: 0;
+            border-right: 650px solid transparent;
+            border-bottom: 100px solid var(--light-green-color);
         }
-
+             
         #upBannerSectionWrapper-Right {
-            background-color: var(--light-green-color);
-            clip-path: inset(0 0 9% 0); /* 9% from the bottom */
+            width: 0;
+            height: 0;
+            border-left: 650px solid transparent;
+            border-bottom: 100px solid var(--light-green-color);
+        }
+    }
 
+    #CuteCards {
+        background-color: #0b0e13;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh; 
+
+        .cuteCard {
+            border: solid 1px #191e25;
+            width: 80vh;
+            display: flex;
+            gap: 5vh;
+            padding: 5vh;
+            background-color: #121a23;
+            background-image: -moz-linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
+            background-image: -webkit-linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
+            background-image: -ms-linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
+            border-radius: 1vh;
+
+            .cuteCard-Main {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .cuteCard-Top {
+                    display: flex;
+                    flex-direction: column;
+    
+                    .cuteCardTopHeading {
+                        color: white;
+                        font-family: var(--barlow-font);
+                        letter-spacing: 0.5px;
+                        font-weight: 900;
+                    }
+    
+                    .cuteCard-TopInside {
+                        display: flex;
+                        flex-direction: column;
+    
+                        img {
+                            object-fit: contain;
+                            width: 5vh;
+                        }
+                    }
+                }
+    
+                .cuteCard-Bottom {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
         }
     }
 }

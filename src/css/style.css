@@ -142,6 +142,7 @@ main #UpBanner #upBanner-Left #upBanner-LeftBottom {
   justify-content: space-around;
   align-items: center;
   width: 40vw;
+  cursor: pointer;
 }
 main #UpBanner #upBanner-Left #upBanner-LeftBottom img {
   -o-object-fit: contain;
@@ -154,16 +155,66 @@ main #UpBanner #upBanner-RightImage {
 }
 main #UpBannerSectionWrapper {
   display: flex;
+  justify-content: space-between;
 }
 main #UpBannerSectionWrapper #upBannerSectionWrapper-Left {
-  background-color: var(--light-green-color);
-  -webkit-clip-path: inset(0 0 9% 0);
-          clip-path: inset(0 0 9% 0); /* 9% from the bottom */
+  width: 0;
+  height: 0;
+  border-right: 650px solid transparent;
+  border-bottom: 100px solid var(--light-green-color);
 }
 main #UpBannerSectionWrapper #upBannerSectionWrapper-Right {
-  background-color: var(--light-green-color);
-  -webkit-clip-path: inset(0 0 9% 0);
-          clip-path: inset(0 0 9% 0); /* 9% from the bottom */
+  width: 0;
+  height: 0;
+  border-left: 650px solid transparent;
+  border-bottom: 100px solid var(--light-green-color);
+}
+main #CuteCards {
+  background-color: #0b0e13;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+main #CuteCards .cuteCard {
+  border: solid 1px #191e25;
+  width: 80vh;
+  display: flex;
+  gap: 5vh;
+  padding: 5vh;
+  background-color: #121a23;
+  background-image: -ms-linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
+  border-radius: 1vh;
+}
+main #CuteCards .cuteCard .cuteCard-Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Top {
+  display: flex;
+  flex-direction: column;
+}
+main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Top .cuteCardTopHeading {
+  color: white;
+  font-family: var(--barlow-font);
+  letter-spacing: 0.5px;
+  font-weight: 900;
+}
+main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Top .cuteCard-TopInside {
+  display: flex;
+  flex-direction: column;
+}
+main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Top .cuteCard-TopInside img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 5vh;
+}
+main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Bottom {
+  display: flex;
+  flex-direction: column;
 }
 
 @font-face {
@@ -176,6 +227,7 @@ main #UpBannerSectionWrapper #upBannerSectionWrapper-Right {
   --poppins-font: "Poppins", sans-serif;
   --berlin-sans-font: "Berlin Sans";
   --light-green-color: #45f882;
+  --light-yellow-color: #ffbe18;
 }
 
 * {
