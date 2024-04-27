@@ -182,19 +182,6 @@ main {
         background-image: url('../images/know-about-us/area_bg01.jpg');
 
 
-        .knowAboutUs-Header {
-            gap: 3vh;
-            
-            &::after {
-                content: "";
-                width: 65px;
-                height: 5px;
-                clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
-                background-color: var(--light-green-color);
-            }
-        }
-
-
         #knowAboutUs-Links {
             display: flex;
             gap: 10vh;
@@ -354,6 +341,121 @@ main {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    #OurTeamMembers {
+        background-image: url('../images/our-team-members/team_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5vh;
+
+        #ourTeamMembersCards {
+            display: flex;
+            justify-content: space-around;
+
+            .ourTeamMembersCard {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.17);
+                border: 1px solid #27313f;
+                background-color: #1c242f;
+                border-radius: 12px;
+                padding: 30px 25px 35px;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+                position: relative;
+                z-index: 1;
+
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    top: -60px;
+                    width: 70px;
+                    height: 320px;
+                    background-color: var(--light-green-color);
+                    transition: all 0.3s ease-out;
+                    opacity: 0.55;
+                    z-index: -1;
+                }
+
+                &::before {
+                    transform: rotate(-55deg);
+                    left: 0;
+                }
+
+                &::after {
+                    transform: rotate(55deg);
+                    right: 0;
+                }
+
+                &:hover::before, &:hover::after {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    transform: translateY(-2vh);
+                }
+
+                a {
+                    color: white;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                span {
+                    color: var(--light-green-color);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    #TopTrending {
+        background-color: #10181f;
+        width: 100%;
+        position: relative;
+
+        .topTrending-Header {
+            display: flex;
+            flex-direction: row;
+
+            h2 {
+                font-size: 36px;
+            }
+
+            img {
+                width: 5vh;
+            }
+
+            &::after {
+                width: 0;
+            }
+        }
+
+        .topTrendingCards {
+            display: flex;
+            gap: 4vh;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            position: relative;
+            width: 100%;
+
+            .topTrendingCard {
+                background-image: url('../images/top-trending/trendnft_img.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                padding: 3vh;
+                margin: 5vh;
             }
         }
     }

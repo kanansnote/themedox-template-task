@@ -222,17 +222,6 @@ main #KnowAboutUs {
   height: 200vh;
   background-image: url("../images/know-about-us/area_bg01.jpg");
 }
-main #KnowAboutUs .knowAboutUs-Header {
-  gap: 3vh;
-}
-main #KnowAboutUs .knowAboutUs-Header::after {
-  content: "";
-  width: 65px;
-  height: 5px;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
-          clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
-  background-color: var(--light-green-color);
-}
 main #KnowAboutUs #knowAboutUs-Links {
   display: flex;
   gap: 10vh;
@@ -365,6 +354,104 @@ main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li a {
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li:hover a {
   color: var(--light-green-color);
 }
+main #OurTeamMembers {
+  background-image: url("../images/our-team-members/team_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+}
+main #OurTeamMembers #ourTeamMembersCards {
+  display: flex;
+  justify-content: space-around;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.17);
+  border: 1px solid #27313f;
+  background-color: #1c242f;
+  border-radius: 12px;
+  padding: 30px 25px 35px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard::before, main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  width: 70px;
+  height: 320px;
+  background-color: var(--light-green-color);
+  transition: all 0.3s ease-out;
+  opacity: 0.55;
+  z-index: -1;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard::before {
+  transform: rotate(-55deg);
+  left: 0;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard::after {
+  transform: rotate(55deg);
+  right: 0;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard:hover::before, main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard:hover::after {
+  opacity: 1;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard:hover {
+  transform: translateY(-2vh);
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+main #OurTeamMembers #ourTeamMembersCards .ourTeamMembersCard span {
+  color: var(--light-green-color);
+  font-weight: 600;
+}
+main #TopTrending {
+  background-color: #10181f;
+  width: 100%;
+  position: relative;
+}
+main #TopTrending .topTrending-Header {
+  display: flex;
+  flex-direction: row;
+}
+main #TopTrending .topTrending-Header h2 {
+  font-size: 36px;
+}
+main #TopTrending .topTrending-Header img {
+  width: 5vh;
+}
+main #TopTrending .topTrending-Header::after {
+  width: 0;
+}
+main #TopTrending .topTrendingCards {
+  display: flex;
+  gap: 4vh;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  position: relative;
+  width: 100%;
+}
+main #TopTrending .topTrendingCards .topTrendingCard {
+  background-image: url("../images/top-trending/trendnft_img.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 3vh;
+  margin: 5vh;
+}
 
 @font-face {
   font-family: "Berlin Sans";
@@ -423,4 +510,12 @@ section {
   letter-spacing: 1px;
   color: white;
   font-size: 45px;
+}
+.section-Header::after {
+  content: "";
+  width: 65px;
+  height: 5px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
+  background-color: var(--light-green-color);
 }/*# sourceMappingURL=style.css.map */

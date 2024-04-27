@@ -61,4 +61,12 @@ section {
         font-size: 45px;
     }
 
+    &::after {
+        content: "";
+        width: 65px;
+        height: 5px;
+        clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
+        background-color: var(--light-green-color);
+    }
+
 }
