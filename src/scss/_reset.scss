@@ -12,6 +12,7 @@
     --berlin-sans-font: 'Berlin Sans';
     --light-green-color: #45f882;
     --light-yellow-color: #ffbe18;
+    --light-gray-color: #adb0bc;
 }
 
 * {
@@ -26,6 +27,18 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+h2, h3, h4, h5, h6, span, a {
+    font-family: var(--barlow-font);
+}
+
+p {
+    font-family: var(--poppins-font);
+}
+
+section {
+    color: white;
 }
 
 .section-Header {

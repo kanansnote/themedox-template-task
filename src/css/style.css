@@ -112,13 +112,11 @@ main #UpBanner #upBanner-Left #upBanner-LeftTop h1 {
 main #UpBanner #upBanner-Left #upBanner-LeftTop p {
   color: white;
   letter-spacing: 5px;
-  font-family: var(--poppins-font);
   font-size: 26px;
   font-weight: 700;
 }
 main #UpBanner #upBanner-Left #upBanner-LeftTop a {
   color: white;
-  font-family: var(--barlow-font);
   position: relative;
   font-weight: bold;
 }
@@ -199,7 +197,6 @@ main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Top {
 }
 main #CuteCards .cuteCard .cuteCard-Main .cuteCard-Top .cuteCardTopHeading {
   color: white;
-  font-family: var(--barlow-font);
   letter-spacing: 0.5px;
   font-weight: 900;
 }
@@ -307,27 +304,66 @@ main #KnowAboutUs #NFTSixAvatars img:hover {
 }
 main #KnowAboutUs #humanGame {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  width: 95%;
+  height: 52vh;
+  gap: 5vh;
+  border-bottom: solid 1px rgba(69, 248, 129, 0.3647058824);
 }
 main #KnowAboutUs #humanGame #humanGame-LeftImage {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 50vh;
+  width: 80vh;
 }
 main #KnowAboutUs #humanGame #humanGame-Right {
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop {
   display: flex;
+  width: 100%;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopLeft {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopLeft h2 {
+  font-size: 30px;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopLeft span {
+  color: var(--light-yellow-color);
+  font-weight: 600;
+  font-size: 20px;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopLeft p {
-  width: 80%;
-  color: white;
+  font-size: 16px;
+  color: var(--light-gray-color);
+  width: 85%;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopRight {
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li {
+  background-color: #1f2935;
+  background-image: linear-gradient(90deg, #10181f 0%, transparent 0%, #141a20 100%);
+  padding: 25px 30px;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li a {
+  color: var(--light-gray-color);
+  font-size: 16px;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li:hover a {
+  color: var(--light-green-color);
 }
 
 @font-face {
@@ -341,6 +377,7 @@ main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Rig
   --berlin-sans-font: "Berlin Sans";
   --light-green-color: #45f882;
   --light-yellow-color: #ffbe18;
+  --light-gray-color: #adb0bc;
 }
 
 * {
@@ -355,6 +392,18 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+h2, h3, h4, h5, h6, span, a {
+  font-family: var(--barlow-font);
+}
+
+p {
+  font-family: var(--poppins-font);
+}
+
+section {
+  color: white;
 }
 
 .section-Header {

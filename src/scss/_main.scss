@@ -49,14 +49,12 @@ main {
                 p {
                     color: white;
                     letter-spacing: 5px;
-                    font-family: var(--poppins-font);
                     font-size: 26px;
                     font-weight: 700;
                 }
 
                 a {
                     color: white;
-                    font-family: var(--barlow-font);
                     position: relative;
                     font-weight: bold;
 
@@ -151,7 +149,6 @@ main {
     
                     .cuteCardTopHeading {
                         color: white;
-                        font-family: var(--barlow-font);
                         letter-spacing: 0.5px;
                         font-weight: 900;
                     }
@@ -284,34 +281,79 @@ main {
         
         #humanGame {
             display: flex;
-            width: 100%;
+            justify-content: space-between;
+            width: 95%;
+            height: 52vh;
+            gap: 5vh;
+            border-bottom: solid 1px #45f8815d;
 
             #humanGame-LeftImage {
                 object-fit: contain;
-                width: 50vh;
+                width: 80vh;
             }
 
             #humanGame-Right {
                 display: flex;
+                justify-content: space-around;
                 flex-direction: column;
 
                 #humanGame-RightTop {
                     display: flex;
+                    width: 100%;
 
                     #humanGame-Right--TopLeft {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2vh;
+
+                        h2 {
+                            font-size: 30px;
+                        }
+
+                        span {
+                            color: var(--light-yellow-color);
+                            font-weight: 600;
+                            font-size: 20px;
+                        }
 
                         p {
-                            width: 80%;
-                            color: white;
+                            font-size: 16px;
+                            color: var(--light-gray-color);
+                            width: 85%;
                         }
                     }
 
                     #humanGame-Right--TopRight {
                         display: flex;
+                        flex-direction: column;
                         align-items: center;
                     }
                 }
 
+                #humanGame-RightBottom {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 70%;
+
+                    li {
+                        background-color: #1f2935;
+                        background-image: linear-gradient(90deg, #10181f 0%, transparent 0%, #141a20 100%);
+                        padding: 25px 30px;
+
+                        a {
+                            color: var(--light-gray-color);
+                            font-size: 16px;
+                        }
+
+                        &:hover {
+                            
+                            a {
+                                color: var(--light-green-color);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
