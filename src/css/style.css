@@ -502,6 +502,124 @@ main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard {
   margin: 5vh;
 }
 
+footer {
+  color: white;
+}
+footer p {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--light-gray-color);
+  font-weight: 400;
+}
+footer #FooterTop {
+  background-color: #0f161b;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  padding: 4vh;
+}
+footer #FooterTop #footerTop-Left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+footer #FooterTop #footerTop-Left img {
+  width: 40vh;
+  height: auto;
+}
+footer #FooterTop #footerTop-Left p {
+  width: 100%;
+}
+footer #FooterTop #footerTop-Left p span {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--light-green-color);
+}
+footer #FooterTop #footerTop-Left p i {
+  margin-right: -1vh;
+  font-size: 16px;
+}
+footer #FooterTop #footerTop-Left ul {
+  display: flex;
+  gap: 3vh;
+}
+footer #FooterTop #footerTop-Left ul li a img {
+  width: 5vh;
+  height: 5vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer #FooterTop #footerTop-Center {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+footer #FooterTop #footerTop-Center .footerTop-CenterLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+footer #FooterTop #footerTop-Center .footerTop-CenterLinks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+footer #FooterTop #footerTop-Center .footerTop-CenterLinks ul li a {
+  transition: all 0.3s ease-in-out;
+  color: var(--light-gray-color);
+}
+footer #FooterTop #footerTop-Center .footerTop-CenterLinks ul li a:hover {
+  color: var(--light-green-color);
+}
+footer #FooterTop #footerTop-Right {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+footer #FooterTop #footerTop-Right p {
+  width: 90%;
+}
+footer #FooterTop #footerTop-Right form {
+  position: relative;
+}
+footer #FooterTop #footerTop-Right form input {
+  background-color: #1f2935;
+  padding: 17px 100px 17px 25px;
+  border: none;
+  border-radius: 6px;
+  height: 60px;
+  font-size: 14px;
+  outline: none;
+  color: var(--light-gray-color);
+}
+footer #FooterTop #footerTop-Right form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 63px;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #1f2935;
+  font-size: 28px;
+  background-color: var(--light-green-color);
+  padding-top: 2vh;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+footer #FooterTop #footerTop-Right form button:hover {
+  background-color: var(--light-yellow-color);
+}
+footer #FooterBottom {
+  background-color: #090d10;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vh;
+}
+
 @font-face {
   font-family: "Berlin Sans";
   src: url("../fonts/berlin-sans/berlin_sans_fb_demi_bold-webfont.woff");
