@@ -433,7 +433,56 @@ main #TopTrending .topTrending-Header img {
 main #TopTrending .topTrending-Header::after {
   width: 0;
 }
-main #TopTrending .topTrendingCards {
+main #TopTrending .topTrendingContainer {
+  width: 100%;
+  height: 100%;
+}
+main #TopTrending .topTrendingContainer .BothSwiperArrows {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #161616;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding-top: 2vh;
+  position: relative;
+  top: 20vh;
+  right: 20vh;
+  border-radius: 6vh;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+main #TopTrending .topTrendingContainer .BothSwiperArrows:hover {
+  background-color: #ffcc7e;
+}
+main #TopTrending .topTrendingContainer .BothSwiperArrows::after {
+  content: "";
+}
+main #TopTrending .topTrendingContainer .BothSwiperArrows i {
+  transition: transform 0.4s ease-in-out;
+}
+main #TopTrending .topTrendingContainer .BothSwiperArrows i:nth-child(1) {
+  padding-bottom: 20px;
+  padding-top: 3px;
+}
+main #TopTrending .topTrendingContainer .swiper-button-prev {
+  position: absolute;
+  top: 6vh;
+  right: 10vh;
+  left: unset;
+}
+main #TopTrending .topTrendingContainer .swiper-button-next {
+  position: absolute;
+  top: 6vh;
+  right: 0;
+}
+main #TopTrending .topTrendingContainer .swiper-button-next i {
+  padding-left: 2px;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards {
   display: flex;
   gap: 4vh;
   overflow-x: scroll;
@@ -441,7 +490,7 @@ main #TopTrending .topTrendingCards {
   position: relative;
   width: 100%;
 }
-main #TopTrending .topTrendingCards .topTrendingCard {
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard {
   background-image: url("../images/top-trending/trendnft_img.png");
   background-size: 100%;
   background-repeat: no-repeat;

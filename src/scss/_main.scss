@@ -1,5 +1,5 @@
 main {
-    
+
     #UpBanner {
         display: flex;
         justify-content: space-around;
@@ -23,7 +23,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 5vh;
-                
+
                 img {
                     opacity: 0.5;
                     position: absolute;
@@ -70,7 +70,7 @@ main {
                         width: 30vh;
                         fill: var(--light-green-color);
                         transition: all 0.3s ease-in-out;
-                        
+
                         &:hover {
                             fill: white;
                         }
@@ -108,7 +108,7 @@ main {
             border-right: 650px solid transparent;
             border-bottom: 100px solid var(--light-green-color);
         }
-             
+
         #upBannerSectionWrapper-Right {
             width: 0;
             height: 0;
@@ -124,7 +124,7 @@ main {
         flex-wrap: wrap;
         gap: 5vh;
         padding-top: 5vh;
-        padding-bottom: 5vh; 
+        padding-bottom: 5vh;
 
         .cuteCard {
             border: solid 1px #191e25;
@@ -146,24 +146,24 @@ main {
                 .cuteCard-Top {
                     display: flex;
                     flex-direction: column;
-    
+
                     .cuteCardTopHeading {
                         color: white;
                         letter-spacing: 0.5px;
                         font-weight: 900;
                     }
-    
+
                     .cuteCard-TopInside {
                         display: flex;
                         flex-direction: column;
-    
+
                         img {
                             object-fit: contain;
                             width: 5vh;
                         }
                     }
                 }
-    
+
                 .cuteCard-Bottom {
                     display: flex;
                     flex-direction: column;
@@ -192,22 +192,22 @@ main {
                 position: relative;
                 font-family: var(--barlow-font);
                 font-weight: 700;
-                
+
                 span {
                     position: absolute;
                     left: 6vh;
                     color: white;
                 }
-                
+
                 .buySvgButtons {
                     width: 25vh;
                     height: 12vh;
                     object-fit: contain;
                     transition: all 0.3s ease-out;
                 }
-                
+
                 &:hover {
-                    
+
                     .buyHero {
                         fill: var(--light-green-color);
                     }
@@ -216,10 +216,10 @@ main {
                         fill: var(--light-yellow-color);
                     }
                 }
-                
+
             }
         }
- 
+
         #NFTSixAvatars {
             display: flex;
             gap: 5vh;
@@ -265,7 +265,7 @@ main {
                 }
             }
         }
-        
+
         #humanGame {
             display: flex;
             justify-content: space-between;
@@ -334,7 +334,7 @@ main {
                         }
 
                         &:hover {
-                            
+
                             a {
                                 color: var(--light-green-color);
                             }
@@ -372,7 +372,8 @@ main {
                 position: relative;
                 z-index: 1;
 
-                &::before, &::after {
+                &::before,
+                &::after {
                     content: "";
                     position: absolute;
                     top: -60px;
@@ -394,7 +395,8 @@ main {
                     right: 0;
                 }
 
-                &:hover::before, &:hover::after {
+                &:hover::before,
+                &:hover::after {
                     opacity: 1;
                 }
 
@@ -438,25 +440,84 @@ main {
             }
         }
 
-        .topTrendingCards {
-            display: flex;
-            gap: 4vh;
-            overflow-x: scroll;
-            scrollbar-width: none;
-            position: relative;
+        .topTrendingContainer {
             width: 100%;
+            height: 100%;
 
-            .topTrendingCard {
-                background-image: url('../images/top-trending/trendnft_img.png');
-                background-size: 100%;
-                background-repeat: no-repeat;
-                width: 30%;
+            .BothSwiperArrows {
                 display: flex;
                 flex-direction: column;
-                gap: 2vh;
-                padding: 3vh;
-                margin: 5vh;
+                background-color: #fff;
+                color: #161616;
+                width: 45px;
+                height: 45px;
+                text-align: center;
+                padding-top: 2vh;
+                position: relative;
+                top: 20vh;
+                right: 20vh;
+                border-radius: 6vh;
+                border: none;
+                cursor: pointer;
+                box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+                overflow: hidden;
+
+                &:hover {
+                    background-color: #ffcc7e;
+                }
+
+                &::after {
+                    content: "";
+                }
+
+                i {
+                    transition: transform 0.4s ease-in-out;
+
+                    &:nth-child(1) {
+                        padding-bottom: 20px;
+                        padding-top: 3px;
+                    }
+                }
+            }
+
+            .swiper-button-prev {
+                position: absolute;
+                top: 6vh;
+                right: 10vh;
+                left: unset;
+            }
+
+            .swiper-button-next {
+                position: absolute;
+                top: 6vh;
+                right: 0;
+
+                i {
+                    padding-left: 2px;
+                }
+            }
+
+            .topTrendingCards {
+                display: flex;
+                gap: 4vh;
+                overflow-x: scroll;
+                scrollbar-width: none;
+                position: relative;
+                width: 100%;
+
+                .topTrendingCard {
+                    background-image: url('../images/top-trending/trendnft_img.png');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2vh;
+                    padding: 3vh;
+                    margin: 5vh;
+                }
             }
         }
     }
 }
+
