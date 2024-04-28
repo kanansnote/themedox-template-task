@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header>
         <img class="logo" src="./src/images/header-footer/logo.png" alt="Logo">
@@ -29,25 +31,218 @@
                         <span>Sign In</span>
                     </div>
                     <svg class="buttonSvg" preserveAspectRatio="none" viewBox="0 0 157 48" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z" fill="#45f882"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 1L1 24.5111L25 47L8 23.4889L25 1Z" fill="#45f882"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.75 1L0.75 25L23.75 47H131.75L155.75 25L131.75 1H24.75Z" stroke="#45f882" stroke-width="1.5"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M131.75 2L155.75 25L131.75 47L148.75 24L131.75 2Z" fill="#45f882"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 1L1 24.5111L25 47L8 23.4889L25 1Z"
+                            fill="#45f882"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.75 1L0.75 25L23.75 47H131.75L155.75 25L131.75 1H24.75Z" stroke="#45f882"
+                            stroke-width="1.5"></path>
                     </svg>
                 </a>
             </li>
         </ul>
     </header>
     <main>
-        
+        <section id="Shop-Header">
+            <img id="shopHeaderBackground" src="./src/images/shop-page/shop-header/breadcrumb_bg02.jpg" alt="">
+            <div id="shop-HeaderText">
+                <h2>Shop</h2>
+                <a href="index.html">MYKD</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span>SHOP</span>
+            </div>
+            <img id="shop-HeaderImage" src="./src/images/shop-page/shop-header/breadcrumb_img01.png" alt="">
+        </section>
+        <div id="UpBannerSectionWrapper">
+            <div id="upBannerSectionWrapper-Left"></div>
+            <div id="upBannerSectionWrapper-Right"></div>
+        </div>
+        <section id="Shop-Content">
+            <div id="shop-Edge">
+                <form id="cardSearch">
+                    <div class="shop-EdgeHeader">
+                        <i class="fa-solid fa-play"></i>
+                        <label for="">Search</label>
+                    </div>
+                    <div class="shop-EdgeMain">
+                        <input type="text" placeholder="Search Products">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </form>
+                <form id="filterByPrice">
+                    <div class="shop-EdgeHeader">
+                        <i class="fa-solid fa-play"></i>
+                        <label for="">Filter by Price</label>
+                    </div>
+                    <div class="shop-EdgeMain">
+                        <input type="range" placeholder="Search Products">
+                    </div>
+                </form>
+                <form id="relatedProducts">
+                    <div class="shop-EdgeHeader">
+                        <i class="fa-solid fa-play"></i>
+                        <label for="">Related Products</label>
+                    </div>
+                    <div class="relatedProductsCard">
+                        <img src="./src/images/shop-page/shop-edge/shop_details02-350x350.jpg" alt="">
+                        <div class="relatedProductsCard-Text">
+                            <a href="https://themedox.com/mykd/product/ps4-controller/">PS4 Controller</a>
+                            <div id="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span>$59.00</span>
+                        </div>
+                    </div>
+                    <div class="relatedProductsCard">
+                        <img src="./src/images/shop-page/shop-edge/shop_details10-350x350.jpg" alt="">
+                        <div class="relatedProductsCard-Text">
+                            <a href="https://themedox.com/mykd/product/gun-robot-x/">Gun Robot X</a>
+                            <span>$149.00</span>
+                        </div>
+                    </div>
+                    <div class="relatedProductsCard">
+                        <img src="./src/images/shop-page/shop-edge/shop_details11-350x350.jpg" alt="">
+                        <div class="relatedProductsCard-Text">
+                            <a href="https://themedox.com/mykd/product/replica-gun/">Replica Gun</a>
+                            <span>$89.00</span>
+                        </div>
+                    </div>
+                </form>
+                <form id="categories">
+                    <div class="shop-EdgeHeader">
+                        <i class="fa-solid fa-play"></i>
+                        <label for="">Categories</label>
+                    </div>
+                    <div id="categoriesLinks">
+                        <a href="https://themedox.com/mykd/product-category/accessories/">Accessories</a>
+                        <a href="https://themedox.com/mykd/product-category/controller/">Controller</a>
+                        <a href="https://themedox.com/mykd/product-category/e-sports/">E-sports</a>
+                        <a href="https://themedox.com/mykd/product-category/gaming/">Gaming</a>
+                        <a href="https://themedox.com/mykd/product-category/tournaments/">Tournaments</a>
+                        <a href=https://themedox.com/mykd/product-category/uncategorized/">Uncategorized</a>
+                    </div>
+                </form>
+            </div>
+            <div id="Shop-Main">
+                <div id="shopCards-Header">
+                    <span>SHOWING 1–9 OF 10 RESULTS</span>
+                    <select name="" id="">
+                        <option value="">Default Sorting</option>
+                        <option value="">Sort by Popularity</option>
+                        <option value="">Sort by Average Rating</option>
+                        <option value="">Sort by Latest</option>
+                        <option value="">Sort by Price: Low to High</option>
+                        <option value="">Sort by Price: High to Low</option>
+                    </select>
+                </div>
+                <div id="shopCards-Main">
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details01.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/gaming-mouse/">Gaming Mouse</a>
+                                <a href="https://themedox.com/mykd/product-category/accessories/">Accessories</a>
+                            </div>
+                            <span>$39.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details02.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/golden-crown/">Golden Crown</a>
+                                <a href="https://themedox.com/mykd/product-category/gaming/">Gaming</a>
+                            </div>
+                            <span>$49.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details03.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/gun-robot-x/">Gun Robot X</a>
+                                <a href="https://themedox.com/mykd/product-category/e-sports/">E-sports</a>
+                            </div>
+                            <span>$149.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details04.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/headphone/">Headphone</a>
+                                <a href="https://themedox.com/mykd/product-category/accessories/">Accessories</a>
+                            </div>
+                            <span>$69.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details05.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/headphone-x/">Headphone X</a>
+                                <a href="https://themedox.com/mykd/product-category/e-sports/">E-sports</a>
+                            </div>
+                            <span>$99.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details06.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/nintendo-switch/">Nintendo Switch</a>
+                                <a href="https://themedox.com/mykd/product-category/e-sports/">E-sports</a>
+                            </div>
+                            <span>$29.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details07.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/ps4-controller/">PS4 Controller</a>
+                                <a href="https://themedox.com/mykd/product-category/controller/">Controller</a>
+                            </div>
+                            <span>$59.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details08.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/ps5-controller/">PS5 Controller</a>
+                                <a href="https://themedox.com/mykd/product-category/controller/">Controller</a>
+                            </div>
+                            <span>$49.00</span>
+                        </div>
+                    </div>
+                    <div class="shopCard">
+                        <img src="./src/images/shop-page/shop-main/shop_details09.jpg" alt="">
+                        <div class="shopCard-Text">
+                            <div class="shopCard-TextLinks">
+                                <a href="https://themedox.com/mykd/product/replica-axe/">Replica Axe</a>
+                                <a href="https://themedox.com/mykd/product-category/accessories/">Accessories</a>
+                            </div>
+                            <span>$69.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div id="FooterTop">
             <div id="footerTop-Left">
                 <img src="./src/images/header-footer/logo_1.png" alt="Logo">
-                <p>Lorem ipsum dolor sitamet consectur adipiscing Duis esollici tudin augue euismod. 
+                <p>Lorem ipsum dolor sitamet consectur adipiscing Duis esollici tudin augue euismod.
                     Nulla ullam dolor sitamet consectetur
                 </p>
-                <p>ACTIVE 
+                <p>ACTIVE
                     <span>WITH US
                         <i class="fa-solid fa-angle-right"></i>
                         <i class="fa-solid fa-angle-right"></i>
@@ -117,4 +312,5 @@
         </div>
     </footer>
 </body>
+
 </html>

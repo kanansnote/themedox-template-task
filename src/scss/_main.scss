@@ -1,5 +1,7 @@
 main {
 
+    /* index.html */
+
     #UpBanner {
         display: flex;
         justify-content: space-around;
@@ -519,5 +521,77 @@ main {
             }
         }
     }
+
+    /* shop.html */
+
+    #Shop-Header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: bold;
+        height: 50vh;
+
+        #shopHeaderBackground {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        #shop-HeaderText {
+            z-index: 2;
+            
+            h2 {
+                text-transform: uppercase;
+                font-size: 50px;
+            }
+
+            a {
+                color: var(--light-green-color);
+            }
+            
+        }
+
+        #shop-HeaderImage {
+            width: 20vw;
+        }
+    }
+
+    #Shop-Content {
+        background-color: #0f161b;
+        display: flex;
+        justify-content: space-around;
+
+        #shop-Edge {
+            text-transform: uppercase;
+            font-family: var(--barlow-font);
+
+            form {
+
+                .shop-EdgeHeader {
+                    border: solid 1px #333333;
+                    padding: 19px 20px;
+
+                    i {
+                        color: var(--light-green-color);
+                    }
+                }
+
+                .relatedProductsCard-Text {
+
+
+                    #stars {
+
+                        .fa-star {
+                            color: var(--light-yellow-color);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
 }
 

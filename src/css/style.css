@@ -67,6 +67,10 @@ header #headerButtonLinks li a #headerButtonLinkItems span {
   font-family: var(--barlow-font);
 }
 
+main {
+  /* index.html */
+  /* shop.html */
+}
 main #UpBanner {
   display: flex;
   justify-content: space-around;
@@ -501,6 +505,52 @@ main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard {
   padding: 3vh;
   margin: 5vh;
 }
+main #Shop-Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  height: 50vh;
+}
+main #Shop-Header #shopHeaderBackground {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+main #Shop-Header #shop-HeaderText {
+  z-index: 2;
+}
+main #Shop-Header #shop-HeaderText h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+main #Shop-Header #shop-HeaderText a {
+  color: var(--light-green-color);
+}
+main #Shop-Header #shop-HeaderImage {
+  width: 20vw;
+}
+main #Shop-Content {
+  background-color: #0f161b;
+  display: flex;
+  justify-content: space-around;
+}
+main #Shop-Content #shop-Edge {
+  text-transform: uppercase;
+  font-family: var(--barlow-font);
+}
+main #Shop-Content #shop-Edge form .shop-EdgeHeader {
+  border: solid 1px #333333;
+  padding: 19px 20px;
+}
+main #Shop-Content #shop-Edge form .shop-EdgeHeader i {
+  color: var(--light-green-color);
+}
+main #Shop-Content #shop-Edge form .relatedProductsCard-Text #stars .fa-star {
+  color: var(--light-yellow-color);
+}
 
 footer {
   color: white;
@@ -654,6 +704,10 @@ h2, h3, h4, h5, h6, span, a {
 
 p {
   font-family: var(--poppins-font);
+}
+
+#ShopPage {
+  background-color: #0f161b;
 }
 
 section {
