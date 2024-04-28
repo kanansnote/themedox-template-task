@@ -74,3 +74,27 @@ section {
     }
 
 }
+
+#topBtn {
+    position: fixed;
+    right: 2vh;
+    bottom: 5vh;
+    background-color: var(--light-green-color);
+    z-index: 10;
+    width: 10vh;
+    height: 10vh;
+    text-align: center;
+    padding-top: 3.4vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: 0.3s;
+
+    i {
+        color: #201F2A;
+        font-size: 26px;
+    }
+
+    &:hover {
+        background-color: #ffbd3c;
+    }
+}

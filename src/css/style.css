@@ -27,6 +27,15 @@ header nav ul li a {
   color: white;
   font-family: var(--barlow-font);
 }
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 42px;
+  height: 1px;
+  top: 50%;
+}
 header #headerButtonLinks {
   display: flex;
   align-items: center;
@@ -739,4 +748,26 @@ section {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
           clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
   background-color: var(--light-green-color);
+}
+
+#topBtn {
+  position: fixed;
+  right: 2vh;
+  bottom: 5vh;
+  background-color: var(--light-green-color);
+  z-index: 10;
+  width: 10vh;
+  height: 10vh;
+  text-align: center;
+  padding-top: 3.4vh;
+  border-radius: 1vh;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#topBtn i {
+  color: #201F2A;
+  font-size: 26px;
+}
+#topBtn:hover {
+  background-color: #ffbd3c;
 }/*# sourceMappingURL=style.css.map */
