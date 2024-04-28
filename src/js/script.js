@@ -28,3 +28,13 @@ topBtn.addEventListener("click", function() {
     block: 'start'       // Scrolls to the top of the page
   });
 });
+
+// Slider for .gallery section using swiper.js
+
+const gallerySwiper = new Swiper('.gallery', {
+  slidesPerView: '3', // Adjust this value to control how many slides are visible at a time
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: 20,
+
+});

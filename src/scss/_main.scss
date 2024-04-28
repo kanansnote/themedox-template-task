@@ -59,6 +59,7 @@ main {
                     color: white;
                     position: relative;
                     font-weight: bold;
+                    width: max-content;
 
                     span {
                         position: absolute;
@@ -72,8 +73,10 @@ main {
                         width: 30vh;
                         fill: var(--light-green-color);
                         transition: all 0.3s ease-in-out;
-
-                        &:hover {
+                    }
+                    
+                    &:hover {
+                        .buttonSvg {
                             fill: white;
                         }
                     }
@@ -130,7 +133,7 @@ main {
 
         .cuteCard {
             border: solid 1px #191e25;
-            width: 80vh;
+            width: 90vh;
             display: flex;
             gap: 5vh;
             padding: 5vh;
@@ -140,10 +143,15 @@ main {
             background-image: -ms-linear-gradient(90deg, #0c0e12 0%, rgba(31, 41, 53, 0.36078) 100%);
             border-radius: 1vh;
 
+            .cuteCard-MainImage {
+                border-radius: 6px;
+            }
+
             .cuteCard-Main {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: space-around;
+                width: 100%;
 
                 .cuteCard-Top {
                     display: flex;
@@ -153,22 +161,72 @@ main {
                         color: white;
                         letter-spacing: 0.5px;
                         font-weight: 900;
+                        font-size: 20px;
+                        transition: all 0.3s ease-out;
+                        letter-spacing: 0.5px;
+
+                        &:hover {
+                            color: var(--light-yellow-color);
+                        }
+                    }
+                }
+
+                .cuteCard-TopCenter {
+                    display: flex;
+                    align-items: center;
+                    gap: 2vh;
+
+                    img {
+                        object-fit: contain;
+                        width: 5vh;
                     }
 
-                    .cuteCard-TopInside {
-                        display: flex;
-                        flex-direction: column;
+                    a {
+                        color: white;
+                        transition: all 0.3s ease-in-out;
 
-                        img {
-                            object-fit: contain;
-                            width: 5vh;
+                        &::after {
+                            content: "";
+                            border-right: solid 1px #9b9b9b;
+                            margin-left: 2vh;
+                        }
+
+                        &:hover {
+                            color: var(--light-yellow-color);
                         }
                     }
                 }
 
                 .cuteCard-Bottom {
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: solid 1px #4c4c4c80;
+                    padding: 14px 15px 14px 20px;
+                    border-radius: 6px;
+
+                    p {
+                        font-size: 18px;
+
+                        span {
+                            color: var(--light-yellow-color);
+                            font-weight: 700;
+                        }
+                    }
+
+                    a {
+                        color: #201f2a;
+                        background-color: var(--light-yellow-color);
+                        font-size: 18px;
+                        border-radius: 6px;
+                        padding: 11px 14px;
+                        font-weight: 600;
+                        transition: all 0.3s ease-out;
+
+                        &:hover {
+                            background-color: var(--light-green-color);
+                        }
+                    }
                 }
             }
         }
@@ -180,9 +238,11 @@ main {
         align-items: center;
         padding-top: 5vh;
         gap: 10vh;
-        height: 200vh;
+        height: 220vh;
         background-image: url('../images/know-about-us/area_bg01.jpg');
-
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
 
         #knowAboutUs-Links {
             display: flex;
@@ -244,28 +304,32 @@ main {
                 margin-bottom: -5vh;
             }
 
-            img {
-                border: solid 1px var(--light-yellow-color);
-                border-radius: 50%;
+            .NFTSixAvatars-Images {
                 position: relative;
-                cursor: pointer;
-                transition: all 0.3s ease-out;
 
-                &::before {
-                    content: "";
+                img {
+                    border: solid 1px var(--light-yellow-color);
+                    border-radius: 50%;
+                    position: relative;
+                    cursor: pointer;
+                    transition: all 0.3s ease-out;
+    
+                    &:hover {
+                        border-color: var(--light-green-color);
+                    }
+                }
+
+                .NFTSixAvatars-ImageShapes {
                     position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
+                    width: 90px;
+                    height: 90px;
+                    left: -5px;
+                    top: -5px;
                     border: solid 1px var(--light-yellow-color);
                     border-radius: 50%;
                 }
-
-                &:hover {
-                    border-color: var(--light-green-color);
-                }
             }
+
         }
 
         #humanGame {
@@ -345,6 +409,38 @@ main {
                 }
             }
         }
+
+        .Gallery {
+            display: flex;
+            overflow-x: scroll;
+            width: 100%;
+            height: 100vh;
+
+            .galleryContainer {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                font-size: 18px;
+                transition: all .3s ease;
+
+                .galleryCard {
+                    width: 100vh;
+
+                    img {
+                        object-fit: contain;
+                        width: 90%;
+                    }
+
+                    .galleryCard-Text {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 
     #OurTeamMembers {
@@ -353,7 +449,16 @@ main {
         background-size: cover;
         display: flex;
         flex-direction: column;
+        gap: 5vh;
         padding-top: 5vh;
+        padding-bottom: 5vh;
+
+        .ourTeamMembers-Header {
+
+            &::after {
+                margin-top: 2vh;
+            }
+        }
 
         #ourTeamMembersCards {
             display: flex;
@@ -364,6 +469,7 @@ main {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                gap: 2vh;
                 box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.17);
                 border: 1px solid #27313f;
                 background-color: #1c242f;
@@ -420,10 +526,64 @@ main {
         }
     }
 
+    #JoinTheCommunity {
+        background-image: url('../images/join-the-community/video_bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2vh;
+        position: relative;
+
+        h2 {
+            font-size: 48px;
+
+            span {
+                color: var(--light-green-color);
+            }
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        a {
+            color: white;
+            position: relative;
+            font-weight: bold;
+            width: max-content;
+
+            span {
+                position: absolute;
+                top: 3vh;
+                left: 6.5vh;
+                color: #201f2a;
+                letter-spacing: 0.8px;
+            }
+
+            .buttonSvg {
+                width: 30vh;
+                fill: var(--light-green-color);
+                transition: all 0.3s ease-in-out;
+            }
+            
+            &:hover {
+                .buttonSvg {
+                    fill: white;
+                }
+            }
+        }
+    }
+
     #TopTrending {
         background-color: #10181f;
         width: 100%;
         position: relative;
+        padding: 5vh;
 
         .topTrending-Header {
             display: flex;
@@ -456,7 +616,7 @@ main {
                 text-align: center;
                 padding-top: 2vh;
                 position: relative;
-                top: 20vh;
+                top: 8vh;
                 right: 20vh;
                 border-radius: 6vh;
                 border: none;
@@ -484,15 +644,13 @@ main {
 
             .swiper-button-prev {
                 position: absolute;
-                top: 6vh;
-                right: 10vh;
+                right: 16vh;
                 left: unset;
             }
 
             .swiper-button-next {
                 position: absolute;
-                top: 6vh;
-                right: 0;
+                right: 6vh;
 
                 i {
                     padding-left: 2px;

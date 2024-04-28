@@ -71,14 +71,7 @@ header {
                 position: relative;
                 display: flex;
                 align-items: center;
-                position: relative;
-            
-                .buttonSvg {
-                    width: 10vw;
-                    height: 3vw;
-                    object-fit: contain;
-                    font-family: var(--barlow-font);
-                }
+
 
                 #headerButtonLinkItems {
                     position: absolute;
@@ -86,6 +79,26 @@ header {
 
                     span {
                         font-family: var(--barlow-font);
+                    }
+                }
+
+                .buttonSvg {
+                    width: 10vw;
+                    height: 3vw;
+                    object-fit: contain;
+                    font-family: var(--barlow-font);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {   
+                    .buttonSvg {
+                        fill: var(--light-green-color);
+                    }
+
+                    #headerButtonLinkItems {
+                        span, i {
+                            color: #131b22;
+                        }
                     }
                 }
             }
