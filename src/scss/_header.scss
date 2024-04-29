@@ -24,20 +24,30 @@ header {
             display: flex;
             gap: 5vh;
 
-            li {
+            li {                
+                padding: 5vh 0;
 
                 a {
                     color: white;
                     font-family: var(--barlow-font);
+                    position: relative;
 
                     &::before {
                         content: "";
                         position: absolute;
-                        left: 0;
-                        right: 0;
-                        width: 42px;
+                        left: 5px;
+                        top: 9px;
+                        width: 80%;
                         height: 1px;
-                        top: 50%;
+                        border-bottom: solid 1px var(--light-green-color);
+                        transition: all 0.3s ease-in-out;
+                        transform: rotate(0);
+                        opacity: 0;
+                    }
+
+                    &:hover::before {
+                        opacity: 1;
+                        transform: rotate(-45deg);
                     }
                 }
             }
@@ -71,7 +81,7 @@ header {
                 position: relative;
                 display: flex;
                 align-items: center;
-
+                transition: all 0.3s ease-in-out;
 
                 #headerButtonLinkItems {
                     position: absolute;
@@ -93,7 +103,7 @@ header {
                 &:hover {   
                     .buttonSvg {
                         fill: var(--light-green-color);
-                    }
+                    }    
 
                     #headerButtonLinkItems {
                         span, i {

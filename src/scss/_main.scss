@@ -27,10 +27,10 @@ main {
                 gap: 5vh;
 
                 img {
-                    opacity: 0.5;
+                    opacity: 0.3;
                     position: absolute;
                     top: 1vh;
-                    left: 0;
+                    left: 3vh;
                     z-index: -1;
                 }
 
@@ -39,6 +39,7 @@ main {
                     color: var(--light-green-color);
                     font-family: var(--poppins-font);
                     letter-spacing: 4px;
+                    padding-left: 3vh;
                 }
 
                 h1 {
@@ -86,13 +87,24 @@ main {
 
             #upBanner-LeftBottom {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
                 width: 40vw;
+                padding-left: 3vh;
                 cursor: pointer;
 
                 img {
                     object-fit: contain;
+                    transition: all 0.3s ease-in-out;
+                    padding: 3vh 0;
+                }
+
+                &:hover img {
+                    opacity: 1; /* Opacity 1 for hovered image */
+                }
+                  
+                &:hover img:not(:hover) {
+                  opacity: 0.3; /* Decrease opacity for non-hovered images */
                 }
             }
         }
@@ -184,6 +196,7 @@ main {
                     a {
                         color: white;
                         transition: all 0.3s ease-in-out;
+                        font-weight: 600;
 
                         &::after {
                             content: "";
@@ -238,11 +251,18 @@ main {
         align-items: center;
         padding-top: 5vh;
         gap: 10vh;
-        height: 220vh;
+        height: 200vh;
         background-image: url('../images/know-about-us/area_bg01.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         z-index: -1;
+
+        .knowAboutUs-Header {
+
+            &::after {
+                margin-top: 2vh;
+            }
+        }
 
         #knowAboutUs-Links {
             display: flex;
@@ -251,21 +271,25 @@ main {
             a {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 position: relative;
                 font-family: var(--barlow-font);
                 font-weight: 700;
+                font-size: 20px;
+                position: relative;
+                bottom: 3vh;
+                transition: all 0.3s ease-out;
 
                 span {
                     position: absolute;
-                    left: 6vh;
+                    left: 5vh;
                     color: white;
                 }
 
                 .buySvgButtons {
                     width: 25vh;
-                    height: 12vh;
+                    height: 10vh;
                     object-fit: contain;
-                    transition: all 0.3s ease-out;
                 }
 
                 &:hover {
@@ -306,17 +330,17 @@ main {
 
             .NFTSixAvatars-Images {
                 position: relative;
+                cursor: pointer;
 
                 img {
                     border: solid 1px var(--light-yellow-color);
                     border-radius: 50%;
                     position: relative;
-                    cursor: pointer;
                     transition: all 0.3s ease-out;
-    
-                    &:hover {
-                        border-color: var(--light-green-color);
-                    }
+                }
+                
+                &:hover img {
+                    border-color: var(--light-green-color);
                 }
 
                 .NFTSixAvatars-ImageShapes {
@@ -327,6 +351,11 @@ main {
                     top: -5px;
                     border: solid 1px var(--light-yellow-color);
                     border-radius: 50%;
+                    transition: all 0.3s ease-out;
+
+                    &:hover {
+                        border-color: var(--light-green-color);
+                    }
                 }
             }
 
@@ -339,6 +368,8 @@ main {
             height: 52vh;
             gap: 5vh;
             border-bottom: solid 1px #45f8815d;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
 
             #humanGame-LeftImage {
                 object-fit: contain;
@@ -352,10 +383,11 @@ main {
 
                 #humanGame-RightTop {
                     display: flex;
+                    justify-content: space-between;
                     width: 100%;
 
                     #humanGame-Right--TopLeft {
-                        width: 100%;
+                        width: 60%;
                         display: flex;
                         flex-direction: column;
                         gap: 2vh;
@@ -373,26 +405,45 @@ main {
                         p {
                             font-size: 16px;
                             color: var(--light-gray-color);
-                            width: 85%;
                         }
                     }
 
                     #humanGame-Right--TopRight {
                         display: flex;
+                        align-items: flex-start;
                         flex-direction: column;
-                        align-items: center;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            gap: 2vh;
+                            background-image: linear-gradient(0deg, #1f2935 0%, transparent 100%, #10181f 100%);
+                            box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.21);
+                            padding: 7px 13px;
+                            border-radius: 7px;
+                            margin: 0 0 11px;
+                            font-family: var(--barlow-font);
+                            font-weight: 700;
+                            transition: 0.3s linear;
+                            width: 100%;
+
+                            img {
+                                object-fit: contain;
+                                
+                            }
+                        }
                     }
                 }
 
                 #humanGame-RightBottom {
                     display: flex;
                     justify-content: space-between;
-                    width: 70%;
+                    width: 100%;
 
                     li {
                         background-color: #1f2935;
                         background-image: linear-gradient(90deg, #10181f 0%, transparent 0%, #141a20 100%);
-                        padding: 25px 30px;
+                        padding: 25px 73px;
 
                         a {
                             color: var(--light-gray-color);
@@ -412,11 +463,11 @@ main {
 
         .Gallery {
             display: flex;
-            overflow-x: scroll;
+            overflow-x: hidden;
             width: 100%;
             height: 100vh;
 
-            .galleryContainer {
+            .galleryCards {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -425,8 +476,11 @@ main {
                 transition: all .3s ease;
 
                 .galleryCard {
-                    width: 100vh;
-
+                    
+                    &:active {
+                        cursor: grab; 
+                    }
+                    
                     img {
                         object-fit: contain;
                         width: 90%;
@@ -434,9 +488,14 @@ main {
 
                     .galleryCard-Text {
                         display: flex;
-                        justify-content: space-around;
+                        justify-content: space-between;
                         align-items: center;
-                        width: 100%;
+                        width: 90%;
+                        padding-left: 4vh;
+
+                        span {
+                            margin-right: -4vh;
+                        }
                     }
                 }
             }
@@ -588,6 +647,7 @@ main {
         .topTrending-Header {
             display: flex;
             flex-direction: row;
+            gap: 1vh;
 
             h2 {
                 font-size: 36px;
@@ -605,27 +665,28 @@ main {
         .topTrendingContainer {
             width: 100%;
             height: 100%;
+            overflow-x: hidden;
 
             .BothSwiperArrows {
                 display: flex;
                 flex-direction: column;
-                background-color: #fff;
-                color: #161616;
+                color: var(--light-gray-color);
                 width: 45px;
                 height: 45px;
                 text-align: center;
-                padding-top: 2vh;
+                padding-top: 2.5vh;
                 position: relative;
                 top: 8vh;
                 right: 20vh;
                 border-radius: 6vh;
-                border: none;
+                border: solid 1px var(--light-gray-color);
                 cursor: pointer;
                 box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
                 overflow: hidden;
 
                 &:hover {
-                    background-color: #ffcc7e;
+                    color: var(--light-green-color);
+                    border-color: var(--light-green-color);
                 }
 
                 &::after {
@@ -660,9 +721,8 @@ main {
             .topTrendingCards {
                 display: flex;
                 gap: 4vh;
-                overflow-x: scroll;
-                scrollbar-width: none;
                 position: relative;
+                scrollbar-width: none;
                 width: 100%;
 
                 .topTrendingCard {
@@ -675,6 +735,100 @@ main {
                     gap: 2vh;
                     padding: 3vh;
                     margin: 5vh;
+
+                    .topTrendingCard-Top {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        transition: all 0.3s ease-in-out;
+
+                        i {
+                            cursor: pointer;
+                            
+                            &:hover {
+                                color: var(--light-green-color);
+                            }
+                        }
+                        
+                        .topTrendingCard-TopLeft {
+                            display: flex;
+                            gap: 2vh;
+
+                            a {
+                                text-decoration: underline;
+                                color: var(--light-gray-color);
+                            }
+                        
+                            .topTrendingCard-TopLeft--Text {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 3px;
+                            }
+                        }
+
+                    }
+
+                    .topTrendingCard-Bottom {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        position: relative;
+                        top: 1vh;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -1.5vh;
+                            opacity: 0.2;
+                            border-top: solid 1px var(--light-gray-color);
+                            width: 100%;
+                            height: 1px;
+                        }
+
+                        .topTrendingCard-BottomText {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2vh;
+
+                            .topTrendingCard-BottomText--Bottom {
+                                display: flex;
+                                align-items: center;
+                                gap: 1vh;
+
+                                i {
+                                    color: var(--light-yellow-color);
+                                }
+                                
+                                p {
+                                    font-size: 18px;
+                                    font-weight: 500;
+
+                                    span {
+                                        margin-left: 5px;
+                                        color: var(--light-yellow-color);
+                                        font-size: 19px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+
+                        a {
+                            color: #201f2a;
+                            background-color: var(--light-yellow-color);
+                            font-size: 18px;
+                            border-radius: 6px;
+                            padding: 11px 14px;
+                            font-weight: 600;
+                            transition: all 0.3s ease-out;
+                            margin-right: 5vh;
+    
+                            &:hover {
+                                background-color: var(--light-green-color);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -720,12 +874,47 @@ main {
         background-color: #0f161b;
         display: flex;
         justify-content: space-around;
+        padding-top: 5vh;
+        width: 100%;
 
         #shop-Edge {
             text-transform: uppercase;
             font-family: var(--barlow-font);
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            font-family: var(--barlow-font);
 
             form {
+                width: 45vh;
+
+                label {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                
+                input {
+                    width: 100%;
+                    background-color: #171d24;
+                    outline: none;
+                    border: none;
+                    color: var(--light-gray-color);
+                    padding: 20px;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+
+                img {
+                    object-fit: contain;
+                    width: 17vh;
+                    height: 17vh;
+                }
+
+                a {
+                    color: white;
+                    transition: all 0.3s ease-in-out;
+                    font-weight: 700;
+                }
 
                 .shop-EdgeHeader {
                     border: solid 1px #333333;
@@ -733,21 +922,227 @@ main {
 
                     i {
                         color: var(--light-green-color);
+                        margin-right: 1vh;
                     }
                 }
 
-                .relatedProductsCard-Text {
+                .shop-EdgeMain {
+                    border: solid 1px #333333;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                }
 
+                .searchProducts {
+                    
+                    i {
+                        position: absolute;
+                        right: 2.5vh;
+                        color: var(--light-gray-color);
+                        cursor: pointer;
+                        transition: 0.25s ease-in-out;
 
-                    #stars {
-
-                        .fa-star {
-                            color: var(--light-yellow-color);
+                        &:hover {
+                            color: var(--light-green-color);
                         }
+                    }
+                }
+
+                .filterByPrice-Main {
+                    padding: 2vh 3vh 3vh 3vh;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #171d24;
+
+                    #filterByPrice-MainText {
+                        display: flex;
+                        gap: 9vh;
+                        font-weight: 600;
+                    }
+                }
+
+                .relatedProductsCards {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 1.5vh;
+                    width: 100%;
+                    background-color: #171d24;
+
+                    .relatedProductsCard {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            padding: 2vh;
+                            border-radius: 3vh;
+                        }
+
+                        .relatedProductsCard-Text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1vh;
+
+                            a:hover {
+                                color: var(--light-green-color);
+                            }
+                            
+                            #stars {
+        
+                                .fa-star {
+                                    color: var(--light-yellow-color);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .categoriesLinks {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5vh;
+                    padding: 3vh;
+                    background-color: #171d24;
+
+                    .categoriesLink {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        transition: 0.3s ease-in-out;
+                        
+                        a, span {
+                            color: var(--light-gray-color);
+                            
+                            &:hover {
+                                color: white;
+                            }
+                        }
+
+
                     }
                 }
             }
 
+        }
+
+        #shop-Main {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+
+            #shopCards-Header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    color: var(--light-gray-color);
+                    font-weight: 500;
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                }
+
+                select {
+                    background-image: linear-gradient(90deg, rgba(18, 21, 24, 0.4902) 0%, rgba(31, 41, 53, 0.36078) 100%);
+                    background-color: #171d24;
+                    color: var(--light-gray-color);
+                    font-size: 14px;
+                    border-radius: 5px;
+                    padding: 10px;
+                    position: relative;
+                    right: 4vh;
+                }
+            }
+
+            #shopCards-Main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5vh;
+                margin-top: 5vh;
+
+                .shopCard {
+                    width: max-content;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5vh;
+
+                    i {
+                        position: absolute;
+                        right: 6.5vh;
+                        top: 6.5vh;
+                        z-index: 5;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        
+                        &:hover {
+                            color: var(--light-green-color);
+                        }
+                    }
+                    
+                    img {
+                        object-fit: cover;
+                    }
+                    
+                    .shopCard-Background {
+                        width: 45vh;
+                        height: 50vh;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+
+                    .shopCard-MainImage {
+                        width: 45vh;
+                        height: 40vh;
+                        padding: 5vh;
+                        z-index: 2;
+                        position: relative;
+                        left: 0;
+                    }
+
+                    .shopCard-Text {
+                        display: flex;
+                        justify-content: space-between;
+                        z-index: 3;
+                        position: relative;
+                        left: 4vh;
+                        bottom: 7vh;
+
+                        .shopCard-TextLinks {
+                            display: flex;
+                            flex-direction: column;
+
+                            a {
+                                color: white;
+                                font-size: 18px;
+                                transition: all 0.3s ease-in-out;
+                                
+                                &:nth-child(1) {
+                                    font-weight: 700;
+                                }
+
+                                &:nth-child(2) {
+                                    color: var(--light-gray-color);
+                                }
+
+                                &:hover {
+                                    color: var(--light-green-color);
+                                }
+                            }
+
+                        }
+
+                        span {
+                            margin-right: 8vh;
+                            color: var(--light-green-color);
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                    }                    
+                }
+            }
         }
     }
 

@@ -1,7 +1,7 @@
 // Slider for .hotBidsCards section using swiper.js
 
-const swiper = new Swiper('.topTrendingContainer', {
-  slidesPerView: '3', // Adjust this value to control how many slides are visible at a time
+const trendingSwiper = new Swiper('.topTrendingContainer', {
+  slidesPerView: 'auto', // Adjust this value to control how many slides are visible at a time
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -31,10 +31,8 @@ topBtn.addEventListener("click", function() {
 
 // Slider for .gallery section using swiper.js
 
-const gallerySwiper = new Swiper('.gallery', {
+const gallerySwiper = new Swiper('.Gallery', {
   slidesPerView: '3', // Adjust this value to control how many slides are visible at a time
   centeredSlides: true,
   loop: true,
-  spaceBetween: 20,
-
 });

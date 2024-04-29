@@ -15,11 +15,41 @@
         <img class="logo" src="./src/images/header-footer/logo.png" alt="Logo">
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
+                <li class="dropdown">
+                    <div id="homePageActive" class="dropbtn">Home</div>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home One</a>
+                        <a href="https://themedox.com/mykd/home-two/">Home Two</a>
+                    </div>
+                </li>
                 <li><a href="">About Us</a></li>
-                <li><a href="">Tournament</a></li>
-                <li><a href="">Pages</a></li>
-                <li><a href="">News</a></li>
+                <li class="dropdown">
+                    <div class="dropbtn tournamentButton">Tournament</div>
+                    <div class="dropdown-content">
+                        <a href="https://themedox.com/mykd/tournament/">Tournament</a>
+                        <a href="https://themedox.com/mykd/tournament-details/">Tournament Details</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropbtn">Pages</div>
+                    <div class="dropdown-content">
+                        <a href="https://themedox.com/mykd/shop/">Gaming Shop</a>
+                        <a href="https://themedox.com/mykd/product/nintendo-switch/">Product Details</a>
+                        <a href="https://themedox.com/mykd/product/our-services/">Our Services</a>
+                        <a href="https://themedox.com/mykd/services/expert-teams/">Service Details</a>
+                        <a href="https://themedox.com/mykd/player-details/">Player Details</a>
+                        <a href="https://themedox.com/mykd/my-account/">My Account</a>
+                        <a href="https://themedox.com/mykd/cart/">Cart</a>
+                        <a href="https://themedox.com/mykd/checkout/">Checkout</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropbtn">News</div>
+                    <div class="dropdown-content">
+                        <a href="https://themedox.com/mykd/blog/">Our Blog</a>
+                        <a href="https://themedox.com/mykd/the-nft-metaverse-alien-worlds/">Blog Details</a>
+                    </div>
+                </li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
@@ -211,7 +241,7 @@
                 </div>
             </div>
             <div class="Gallery swiper-container">
-                <div class="galleryContainer swiper-wrapper">
+                <div class="galleryCards swiper-wrapper">
                     <div class="galleryCard swiper-slide">
                         <img src="./src/images/gallery/gallery01.jpg" alt="Gallery 1">
                         <div class="galleryCard-Text">
@@ -310,51 +340,117 @@
                         <div class="topTrendingCard-Top">
                             <div class="topTrendingCard-TopLeft">
                                 <img src="./src/images/top-trending/nft_avatar01.png" alt="NFT Avatar 1">
+                                <div class="topTrendingCard-TopLeft--Text">
+                                    <h4>King Crypto</h4>
+                                    <a href="https://opensea.io/collection/boredapeyachtclub">@Jon Max</a>
+                                </div>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <img src="./src/images/top-trending/nft_img01.jpg" alt="NFT Image 1">
+                        <div class="topTrendingCard-Bottom">
+                            <div class="topTrendingCard-BottomText">
+                                <span>Last Bid</span>
+                                <div class="topTrendingCard-BottomText--Bottom">
+                                    <i class="fab fa-ethereum"></i>
+                                    <p>1.002<span>ETH</span></p>
+                                </div>
+                            </div>
+                            <a href="https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/8217">Bid <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
                     <div class="topTrendingCard swiper-slide">
                         <div class="topTrendingCard-Top">
                             <div class="topTrendingCard-TopLeft">
                                 <img src="./src/images/top-trending/nft_avatar02.png" alt="NFT Avatar 2">
+                                <div class="topTrendingCard-TopLeft--Text">
+                                    <h4>Golden Crypto</h4>
+                                    <a href="https://opensea.io/collection/boredapeyachtclub">@Jon Max</a>
+                                </div>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <img src="./src/images/top-trending/nft_img02.jpg" alt="NFT Image 2">
+                        <div class="topTrendingCard-Bottom">
+                            <div class="topTrendingCard-BottomText">
+                                <span>Last Bid</span>
+                                <div class="topTrendingCard-BottomText--Bottom">
+                                    <i class="fab fa-ethereum"></i>
+                                    <p>1.022<span>ETH</span></p>
+                                </div>
+                            </div>
+                            <a href="https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/8217">Bid <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
-
                     <div class="topTrendingCard swiper-slide">
                         <div class="topTrendingCard-Top">
                             <div class="topTrendingCard-TopLeft">
                                 <img src="./src/images/top-trending/nft_avatar03.png" alt="NFT Avatar 3">
+                                <div class="topTrendingCard-TopLeft--Text">
+                                    <h4>Black Crypto</h4>
+                                    <a href="https://opensea.io/collection/boredapeyachtclub">@Jon Max</a>
+                                </div>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <img src="./src/images/top-trending/nft_img03.jpg" alt="NFT Image 3">
+                        <div class="topTrendingCard-Bottom">
+                            <div class="topTrendingCard-BottomText">
+                                <span>Last Bid</span>
+                                <div class="topTrendingCard-BottomText--Bottom">
+                                    <i class="fab fa-ethereum"></i>
+                                    <p>1.059<span>ETH</span></p>
+                                </div>
+                            </div>
+                            <a href="https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/367">Bid <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
-
                     <div class="topTrendingCard swiper-slide">
                         <div class="topTrendingCard-Top">
                             <div class="topTrendingCard-TopLeft">
                                 <img src="./src/images/top-trending/nft_avatar01.png" alt="NFT Avatar 1">
+                                <div class="topTrendingCard-TopLeft--Text">
+                                    <h4>Luck Crypto</h4>
+                                    <a href="https://opensea.io/collection/boredapeyachtclub">@Jon Max</a>
+                                </div>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <img src="./src/images/top-trending/nft_img04.jpg" alt="NFT Image 4">
+                        <div class="topTrendingCard-Bottom">
+                            <div class="topTrendingCard-BottomText">
+                                <span>Last Bid</span>
+                                <div class="topTrendingCard-BottomText--Bottom">
+                                    <i class="fab fa-ethereum"></i>
+                                    <p>1.079<span>ETH</span></p>
+                                </div>
+                            </div>
+                            <a href="https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/3059">Bid <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
-
                     <div class="topTrendingCard swiper-slide">
                         <div class="topTrendingCard-Top">
                             <div class="topTrendingCard-TopLeft">
                                 <img src="./src/images/top-trending/nft_avatar02.png" alt="NFT Avatar 2">
+                                <div class="topTrendingCard-TopLeft--Text">
+                                    <h4>Another Crypto</h4>
+                                    <a href="https://opensea.io/collection/boredapeyachtclub">@Jon Max</a>
+                                </div>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
-                        <img src="./src/images/top-trending/nft_img01.jpg" alt="NFT Image 1">
+                        <img src="./src/images/top-trending/nft_img05.jpg" alt="NFT Image 5">
+                        <div class="topTrendingCard-Bottom">
+                            <div class="topTrendingCard-BottomText">
+                                <span>Last Bid</span>
+                                <div class="topTrendingCard-BottomText--Bottom">
+                                    <i class="fab fa-ethereum"></i>
+                                    <p>1.069<span>ETH</span></p>
+                                </div>
+                            </div>
+                            <a href="https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/3059">Bid <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>

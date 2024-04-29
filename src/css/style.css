@@ -23,18 +23,29 @@ header nav ul {
   display: flex;
   gap: 5vh;
 }
+header nav ul li {
+  padding: 5vh 0;
+}
 header nav ul li a {
   color: white;
   font-family: var(--barlow-font);
+  position: relative;
 }
 header nav ul li a::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  width: 42px;
+  left: 5px;
+  top: 9px;
+  width: 80%;
   height: 1px;
-  top: 50%;
+  border-bottom: solid 1px var(--light-green-color);
+  transition: all 0.3s ease-in-out;
+  transform: rotate(0);
+  opacity: 0;
+}
+header nav ul li a:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg);
 }
 header #headerButtonLinks {
   display: flex;
@@ -59,6 +70,7 @@ header #headerButtonLinks li a {
   position: relative;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 header #headerButtonLinks li a #headerButtonLinkItems {
   position: absolute;
@@ -110,10 +122,10 @@ main #UpBanner #upBanner-Left #upBanner-LeftTop {
   gap: 5vh;
 }
 main #UpBanner #upBanner-Left #upBanner-LeftTop img {
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   top: 1vh;
-  left: 0;
+  left: 3vh;
   z-index: -1;
 }
 main #UpBanner #upBanner-Left #upBanner-LeftTop h3 {
@@ -121,6 +133,7 @@ main #UpBanner #upBanner-Left #upBanner-LeftTop h3 {
   color: var(--light-green-color);
   font-family: var(--poppins-font);
   letter-spacing: 4px;
+  padding-left: 3vh;
 }
 main #UpBanner #upBanner-Left #upBanner-LeftTop h1 {
   font-size: 100px;
@@ -158,14 +171,23 @@ main #UpBanner #upBanner-Left #upBanner-LeftTop a:hover .buttonSvg {
 }
 main #UpBanner #upBanner-Left #upBanner-LeftBottom {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 40vw;
+  padding-left: 3vh;
   cursor: pointer;
 }
 main #UpBanner #upBanner-Left #upBanner-LeftBottom img {
   -o-object-fit: contain;
      object-fit: contain;
+  transition: all 0.3s ease-in-out;
+  padding: 3vh 0;
+}
+main #UpBanner #upBanner-Left #upBanner-LeftBottom:hover img {
+  opacity: 1; /* Opacity 1 for hovered image */
+}
+main #UpBanner #upBanner-Left #upBanner-LeftBottom:hover img:not(:hover) {
+  opacity: 0.3; /* Decrease opacity for non-hovered images */
 }
 main #UpBanner #upBanner-RightImage {
   -o-object-fit: contain;
@@ -244,6 +266,7 @@ main #CuteCards .cuteCard .cuteCard-Main .cuteCard-TopCenter img {
 main #CuteCards .cuteCard .cuteCard-Main .cuteCard-TopCenter a {
   color: white;
   transition: all 0.3s ease-in-out;
+  font-weight: 600;
 }
 main #CuteCards .cuteCard .cuteCard-Main .cuteCard-TopCenter a::after {
   content: "";
@@ -286,11 +309,14 @@ main #KnowAboutUs {
   align-items: center;
   padding-top: 5vh;
   gap: 10vh;
-  height: 220vh;
+  height: 200vh;
   background-image: url("../images/know-about-us/area_bg01.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+}
+main #KnowAboutUs .knowAboutUs-Header::after {
+  margin-top: 2vh;
 }
 main #KnowAboutUs #knowAboutUs-Links {
   display: flex;
@@ -299,21 +325,25 @@ main #KnowAboutUs #knowAboutUs-Links {
 main #KnowAboutUs #knowAboutUs-Links a {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   font-family: var(--barlow-font);
   font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  bottom: 3vh;
+  transition: all 0.3s ease-out;
 }
 main #KnowAboutUs #knowAboutUs-Links a span {
   position: absolute;
-  left: 6vh;
+  left: 5vh;
   color: white;
 }
 main #KnowAboutUs #knowAboutUs-Links a .buySvgButtons {
   width: 25vh;
-  height: 12vh;
+  height: 10vh;
   -o-object-fit: contain;
      object-fit: contain;
-  transition: all 0.3s ease-out;
 }
 main #KnowAboutUs #knowAboutUs-Links a:hover .buyHero {
   fill: var(--light-green-color);
@@ -343,15 +373,15 @@ main #KnowAboutUs #NFTSixAvatars::after {
 }
 main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images {
   position: relative;
+  cursor: pointer;
 }
 main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images img {
   border: solid 1px var(--light-yellow-color);
   border-radius: 50%;
   position: relative;
-  cursor: pointer;
   transition: all 0.3s ease-out;
 }
-main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images img:hover {
+main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images:hover img {
   border-color: var(--light-green-color);
 }
 main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images .NFTSixAvatars-ImageShapes {
@@ -362,6 +392,10 @@ main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images .NFTSixAvatars-ImageShape
   top: -5px;
   border: solid 1px var(--light-yellow-color);
   border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+main #KnowAboutUs #NFTSixAvatars .NFTSixAvatars-Images .NFTSixAvatars-ImageShapes:hover {
+  border-color: var(--light-green-color);
 }
 main #KnowAboutUs #humanGame {
   display: flex;
@@ -370,6 +404,8 @@ main #KnowAboutUs #humanGame {
   height: 52vh;
   gap: 5vh;
   border-bottom: solid 1px rgba(69, 248, 129, 0.3647058824);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 main #KnowAboutUs #humanGame #humanGame-LeftImage {
   -o-object-fit: contain;
@@ -383,10 +419,11 @@ main #KnowAboutUs #humanGame #humanGame-Right {
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopLeft {
-  width: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -402,22 +439,39 @@ main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Rig
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopLeft p {
   font-size: 16px;
   color: var(--light-gray-color);
-  width: 85%;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopRight {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopRight li {
+  display: flex;
   align-items: center;
+  gap: 2vh;
+  background-image: linear-gradient(0deg, #1f2935 0%, transparent 100%, #10181f 100%);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.21);
+  padding: 7px 13px;
+  border-radius: 7px;
+  margin: 0 0 11px;
+  font-family: var(--barlow-font);
+  font-weight: 700;
+  transition: 0.3s linear;
+  width: 100%;
+}
+main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightTop #humanGame-Right--TopRight li img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 100%;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li {
   background-color: #1f2935;
   background-image: linear-gradient(90deg, #10181f 0%, transparent 0%, #141a20 100%);
-  padding: 25px 30px;
+  padding: 25px 73px;
 }
 main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li a {
   color: var(--light-gray-color);
@@ -428,11 +482,11 @@ main #KnowAboutUs #humanGame #humanGame-Right #humanGame-RightBottom li:hover a 
 }
 main #KnowAboutUs .Gallery {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   width: 100%;
   height: 100vh;
 }
-main #KnowAboutUs .Gallery .galleryContainer {
+main #KnowAboutUs .Gallery .galleryCards {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -440,19 +494,23 @@ main #KnowAboutUs .Gallery .galleryContainer {
   font-size: 18px;
   transition: all 0.3s ease;
 }
-main #KnowAboutUs .Gallery .galleryContainer .galleryCard {
-  width: 100vh;
+main #KnowAboutUs .Gallery .galleryCards .galleryCard:active {
+  cursor: grab;
 }
-main #KnowAboutUs .Gallery .galleryContainer .galleryCard img {
+main #KnowAboutUs .Gallery .galleryCards .galleryCard img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 90%;
 }
-main #KnowAboutUs .Gallery .galleryContainer .galleryCard .galleryCard-Text {
+main #KnowAboutUs .Gallery .galleryCards .galleryCard .galleryCard-Text {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
+  padding-left: 4vh;
+}
+main #KnowAboutUs .Gallery .galleryCards .galleryCard .galleryCard-Text span {
+  margin-right: -4vh;
 }
 main #OurTeamMembers {
   background-image: url("../images/our-team-members/team_bg.jpg");
@@ -574,6 +632,7 @@ main #TopTrending {
 main #TopTrending .topTrending-Header {
   display: flex;
   flex-direction: row;
+  gap: 1vh;
 }
 main #TopTrending .topTrending-Header h2 {
   font-size: 36px;
@@ -587,27 +646,28 @@ main #TopTrending .topTrending-Header::after {
 main #TopTrending .topTrendingContainer {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 main #TopTrending .topTrendingContainer .BothSwiperArrows {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  color: #161616;
+  color: var(--light-gray-color);
   width: 45px;
   height: 45px;
   text-align: center;
-  padding-top: 2vh;
+  padding-top: 2.5vh;
   position: relative;
   top: 8vh;
   right: 20vh;
   border-radius: 6vh;
-  border: none;
+  border: solid 1px var(--light-gray-color);
   cursor: pointer;
   box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 main #TopTrending .topTrendingContainer .BothSwiperArrows:hover {
-  background-color: #ffcc7e;
+  color: var(--light-green-color);
+  border-color: var(--light-green-color);
 }
 main #TopTrending .topTrendingContainer .BothSwiperArrows::after {
   content: "";
@@ -634,9 +694,8 @@ main #TopTrending .topTrendingContainer .swiper-button-next i {
 main #TopTrending .topTrendingContainer .topTrendingCards {
   display: flex;
   gap: 4vh;
-  overflow-x: scroll;
-  scrollbar-width: none;
   position: relative;
+  scrollbar-width: none;
   width: 100%;
 }
 main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard {
@@ -649,6 +708,84 @@ main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard {
   gap: 2vh;
   padding: 3vh;
   margin: 5vh;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Top i {
+  cursor: pointer;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Top i:hover {
+  color: var(--light-green-color);
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Top .topTrendingCard-TopLeft {
+  display: flex;
+  gap: 2vh;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Top .topTrendingCard-TopLeft a {
+  text-decoration: underline;
+  color: var(--light-gray-color);
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Top .topTrendingCard-TopLeft .topTrendingCard-TopLeft--Text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 1vh;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom::before {
+  content: "";
+  position: absolute;
+  top: -1.5vh;
+  opacity: 0.2;
+  border-top: solid 1px var(--light-gray-color);
+  width: 100%;
+  height: 1px;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom .topTrendingCard-BottomText {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom .topTrendingCard-BottomText .topTrendingCard-BottomText--Bottom {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom .topTrendingCard-BottomText .topTrendingCard-BottomText--Bottom i {
+  color: var(--light-yellow-color);
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom .topTrendingCard-BottomText .topTrendingCard-BottomText--Bottom p {
+  font-size: 18px;
+  font-weight: 500;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom .topTrendingCard-BottomText .topTrendingCard-BottomText--Bottom p span {
+  margin-left: 5px;
+  color: var(--light-yellow-color);
+  font-size: 19px;
+  font-weight: 600;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom a {
+  color: #201f2a;
+  background-color: var(--light-yellow-color);
+  font-size: 18px;
+  border-radius: 6px;
+  padding: 11px 14px;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+  margin-right: 5vh;
+}
+main #TopTrending .topTrendingContainer .topTrendingCards .topTrendingCard .topTrendingCard-Bottom a:hover {
+  background-color: var(--light-green-color);
 }
 main #Shop-Header {
   display: flex;
@@ -681,10 +818,44 @@ main #Shop-Content {
   background-color: #0f161b;
   display: flex;
   justify-content: space-around;
+  padding-top: 5vh;
+  width: 100%;
 }
 main #Shop-Content #shop-Edge {
   text-transform: uppercase;
   font-family: var(--barlow-font);
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  font-family: var(--barlow-font);
+}
+main #Shop-Content #shop-Edge form {
+  width: 45vh;
+}
+main #Shop-Content #shop-Edge form label {
+  font-weight: 700;
+  font-size: 18px;
+}
+main #Shop-Content #shop-Edge form input {
+  width: 100%;
+  background-color: #171d24;
+  outline: none;
+  border: none;
+  color: var(--light-gray-color);
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+main #Shop-Content #shop-Edge form img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 17vh;
+  height: 17vh;
+}
+main #Shop-Content #shop-Edge form a {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
 }
 main #Shop-Content #shop-Edge form .shop-EdgeHeader {
   border: solid 1px #333333;
@@ -692,9 +863,183 @@ main #Shop-Content #shop-Edge form .shop-EdgeHeader {
 }
 main #Shop-Content #shop-Edge form .shop-EdgeHeader i {
   color: var(--light-green-color);
+  margin-right: 1vh;
 }
-main #Shop-Content #shop-Edge form .relatedProductsCard-Text #stars .fa-star {
+main #Shop-Content #shop-Edge form .shop-EdgeMain {
+  border: solid 1px #333333;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main #Shop-Content #shop-Edge form .searchProducts i {
+  position: absolute;
+  right: 2.5vh;
+  color: var(--light-gray-color);
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+main #Shop-Content #shop-Edge form .searchProducts i:hover {
+  color: var(--light-green-color);
+}
+main #Shop-Content #shop-Edge form .filterByPrice-Main {
+  padding: 2vh 3vh 3vh 3vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #171d24;
+}
+main #Shop-Content #shop-Edge form .filterByPrice-Main #filterByPrice-MainText {
+  display: flex;
+  gap: 9vh;
+  font-weight: 600;
+}
+main #Shop-Content #shop-Edge form .relatedProductsCards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5vh;
+  width: 100%;
+  background-color: #171d24;
+}
+main #Shop-Content #shop-Edge form .relatedProductsCards .relatedProductsCard {
+  display: flex;
+  align-items: center;
+}
+main #Shop-Content #shop-Edge form .relatedProductsCards .relatedProductsCard img {
+  padding: 2vh;
+  border-radius: 3vh;
+}
+main #Shop-Content #shop-Edge form .relatedProductsCards .relatedProductsCard .relatedProductsCard-Text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+main #Shop-Content #shop-Edge form .relatedProductsCards .relatedProductsCard .relatedProductsCard-Text a:hover {
+  color: var(--light-green-color);
+}
+main #Shop-Content #shop-Edge form .relatedProductsCards .relatedProductsCard .relatedProductsCard-Text #stars .fa-star {
   color: var(--light-yellow-color);
+}
+main #Shop-Content #shop-Edge form .categoriesLinks {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5vh;
+  padding: 3vh;
+  background-color: #171d24;
+}
+main #Shop-Content #shop-Edge form .categoriesLinks .categoriesLink {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+main #Shop-Content #shop-Edge form .categoriesLinks .categoriesLink a, main #Shop-Content #shop-Edge form .categoriesLinks .categoriesLink span {
+  color: var(--light-gray-color);
+}
+main #Shop-Content #shop-Edge form .categoriesLinks .categoriesLink a:hover, main #Shop-Content #shop-Edge form .categoriesLinks .categoriesLink span:hover {
+  color: white;
+}
+main #Shop-Content #shop-Main {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+main #Shop-Content #shop-Main #shopCards-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #Shop-Content #shop-Main #shopCards-Header span {
+  color: var(--light-gray-color);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+main #Shop-Content #shop-Main #shopCards-Header select {
+  background-image: linear-gradient(90deg, rgba(18, 21, 24, 0.4902) 0%, rgba(31, 41, 53, 0.36078) 100%);
+  background-color: #171d24;
+  color: var(--light-gray-color);
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  right: 4vh;
+}
+main #Shop-Content #shop-Main #shopCards-Main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vh;
+  margin-top: 5vh;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard {
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard i {
+  position: absolute;
+  right: 6.5vh;
+  top: 6.5vh;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard i:hover {
+  color: var(--light-green-color);
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Background {
+  width: 45vh;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-MainImage {
+  width: 45vh;
+  height: 40vh;
+  padding: 5vh;
+  z-index: 2;
+  position: relative;
+  left: 0;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text {
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  position: relative;
+  left: 4vh;
+  bottom: 7vh;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text .shopCard-TextLinks {
+  display: flex;
+  flex-direction: column;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text .shopCard-TextLinks a {
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text .shopCard-TextLinks a:nth-child(1) {
+  font-weight: 700;
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text .shopCard-TextLinks a:nth-child(2) {
+  color: var(--light-gray-color);
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text .shopCard-TextLinks a:hover {
+  color: var(--light-green-color);
+}
+main #Shop-Content #shop-Main #shopCards-Main .shopCard .shopCard-Text span {
+  margin-right: 8vh;
+  color: var(--light-green-color);
+  font-weight: 700;
+  font-size: 18px;
 }
 
 footer {
@@ -906,4 +1251,101 @@ section {
 }
 #topBtn:hover {
   background-color: #ffbd3c;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.dropdown:hover .dropbtn {
+  color: var(--light-green-color);
+}
+.dropdown .dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  color: white;
+  font-family: var(--barlow-font);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.dropdown .dropbtn::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 34px;
+  width: 80%;
+  height: 1px;
+  border-bottom: solid 1px var(--light-green-color);
+  transition: all 0.3s ease-in-out;
+  transform: rotate(0);
+  opacity: 0;
+}
+.dropdown .dropbtn:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+.dropdown .dropdown-content {
+  display: none;
+  background-color: #182029;
+  width: 210px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: 0.3s;
+  position: absolute;
+  top: 13vh;
+  left: -3vh;
+  padding: 2vh;
+  border: solid 1px #22292f;
+}
+.dropdown .dropdown-content a {
+  color: white;
+  padding: 12px 16px 12px 20px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+.dropdown .dropdown-content a:hover {
+  color: var(--light-green-color);
+  padding-left: 25px;
+}
+.dropdown .dropdown-content a::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: var(--light-green-color);
+  transition: width 0.2s linear;
+  border-radius: 0 5px 0 0;
+  opacity: 0;
+}
+.dropdown .dropdown-content a:hover::before {
+  left: 4px;
+  border: solid 1px var(--light-green-color);
+  opacity: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn i {
+  transform: rotate(180deg);
+}
+
+/* This will change the width and background color of the scrollbar */
+::-webkit-scrollbar {
+  background-color: #232323;
+}
+
+/* This will style the handle or "thumb" of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-green-color);
+}
+
+/* This will style the track that the handle moves along */
+::-webkit-scrollbar-track {
+  background-color: rgba(69, 248, 129, 0.3098039216);
 }/*# sourceMappingURL=style.css.map */
