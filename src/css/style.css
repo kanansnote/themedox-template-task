@@ -623,6 +623,137 @@ main #JoinTheCommunity a .buttonSvg {
 main #JoinTheCommunity a:hover .buttonSvg {
   fill: white;
 }
+main #LookIntoRoadmaps {
+  display: flex;
+  justify-content: center;
+  background-image: url("../images/roadmap/roadmap_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150vh;
+  padding-top: 5vh;
+}
+main #LookIntoRoadmaps #roadmapSeasons {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+  gap: 5vh;
+}
+main #LookIntoRoadmaps #roadmapSeasons h2 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1em;
+  letter-spacing: 3px;
+}
+main #LookIntoRoadmaps #roadmapSeasons p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75em;
+  letter-spacing: 1px;
+  color: var(--light-gray-color);
+  width: 80%;
+}
+main #LookIntoRoadmaps #roadmapSeasons a {
+  color: white;
+  position: relative;
+  font-weight: bold;
+  width: -moz-max-content;
+  width: max-content;
+}
+main #LookIntoRoadmaps #roadmapSeasons a span {
+  position: absolute;
+  top: 3vh;
+  left: 8vh;
+  color: #201f2a;
+  letter-spacing: 0.8px;
+}
+main #LookIntoRoadmaps #roadmapSeasons a .buttonSvg {
+  width: 30vh;
+  fill: var(--light-yellow-color);
+  transition: all 0.3s ease-in-out;
+}
+main #LookIntoRoadmaps #roadmapSeasons a:hover .buttonSvg {
+  fill: var(--light-green-color);
+}
+main #LookIntoRoadmaps #roadmapSeasons #roadmapImage {
+  width: 65vh;
+  position: relative;
+  top: 5vh;
+  animation-name: roadmapImage;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes roadmapImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+main #LookIntoRoadmaps #seasonCards {
+  position: relative;
+}
+main #LookIntoRoadmaps #seasonCards::before {
+  content: "";
+  position: absolute;
+  left: -5vh;
+  border-left: solid 6px var(--light-green-color);
+  height: 137vh;
+  border-radius: 6px;
+}
+main #LookIntoRoadmaps #seasonCards .seasonCard {
+  position: relative;
+  padding: 45px 100px 45px 50px;
+  border-radius: 8px;
+  margin: 0 90px 20px 25px;
+  background-color: #1b242e;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.21);
+}
+main #LookIntoRoadmaps #seasonCards .seasonCard:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -8vh;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-left: 30px solid var(--light-green-color);
+  border-bottom: 33px solid transparent;
+}
+main #LookIntoRoadmaps #seasonCards .seasonCard h3 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+main #LookIntoRoadmaps #seasonCards .seasonCard ul li {
+  position: relative;
+  font-weight: 500;
+  padding-left: 37px;
+  margin: 0 0 6px;
+  font-size: 500;
+  font-family: var(--poppins-font);
+  color: var(--light-gray-color);
+}
+main #LookIntoRoadmaps #seasonCards .seasonCard ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-green-color);
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+main #LookIntoRoadmaps #seasonCards .seasonCard ul .bulletInMidnightBlue::before {
+  background-color: #10161c;
+}
 main #TopTrending {
   background-color: #10181f;
   width: 100%;
